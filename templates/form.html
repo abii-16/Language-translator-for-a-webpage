@@ -1,0 +1,84 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title>Simple Form</title>
+  <script src="/static/translate.js" defer></script>
+  <style>
+    body {
+      font-family: Arial, sans-serif;
+      padding: 30px;
+      display: flex;
+      justify-content: center;
+      position: relative;
+    }
+    form {
+      border: 1px solid #ccc;
+      padding: 20px;
+      border-radius: 8px;
+      width: 300px;
+    }
+    h2 {
+      text-align: center;
+    }
+    label {
+      display: block;
+      margin-top: 10px;
+    }
+    input, textarea, select {
+      width: 100%;
+      padding: 6px;
+      margin-top: 5px;
+      box-sizing: border-box;
+    }
+    button {
+      margin-top: 15px;
+      width: 100%;
+      padding: 8px;
+      background-color: #28a745;
+      color: white;
+      border: none;
+      cursor: pointer;
+    }
+    button:hover {
+      background-color: #218838;
+    }
+
+    #translation-header {
+      position: fixed;
+      top: 10px;
+      right: 160px;
+      font-size: 18px;
+      font-weight: bold;
+      background-color: white;
+      padding: 5px;
+      z-index: 9999;
+    }
+  </style>
+</head>
+<body>
+  <form id="simpleForm">
+    <h2>Registration Form</h2>
+
+    <label for="name">Name:</label>
+    <input type="text" id="name" placeholder="Enter your name" required>
+
+    <label for="age">Age:</label>
+    <input type="number" id="age" placeholder="Enter your age" required>
+
+    <label for="address">Address:</label>
+    <textarea id="address" rows="3" placeholder="Enter your address" required></textarea>
+
+    <label for="country">Country:</label>
+    <select id="country" required>
+      <option value="">Select Country</option>
+      <option value="India">India</option>
+      <option value="USA">USA</option>
+      <option value="UK">UK</option>
+      <option value="Canada">Canada</option>
+    </select>
+
+    <button type="submit">Submit</button>
+  </form>
+</body>
+</html>
